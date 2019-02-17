@@ -1,4 +1,4 @@
-PyTorch implementation of Neural Processes (NP) by Garnelo et al [https://arxiv.org/abs/1807.01622]
+PyTorch implementation of Neural Processes (NP) by Garnelo et al https://arxiv.org/abs/1807.01622
 # MNIST image completion
 The task is to complete an image given some number \[1;784\] of context points (coordinates) at which we know the greyscale pixel intensity \[0;1].
 
@@ -22,9 +22,9 @@ The five rows below show realisations of different samples of the global latent 
 
 # Requirements
  - Python 3
- - PyTorch 0.4.1
+ - PyTorch 0.4.1 or later (tested with 1.0.1)
 
 
 
 # Other NP implementations
-R + TensorFlow - [https://github.com/kasparmartens/NeuralProcesses]
+R + TensorFlow - https://github.com/kasparmartens/NeuralProcesses

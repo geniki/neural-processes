@@ -1,11 +1,13 @@
+import os
 import argparse
+import random
+
 import torch
 import torch.utils.data
 from torch import nn, optim
 from torch.nn import functional as F
 from torchvision import datasets, transforms
 from torchvision.utils import save_image
-import random
 
 parser = argparse.ArgumentParser(description='Neural Processes (NP) for MNIST image completion')
 parser.add_argument('--batch-size', type=int, default=128, metavar='N',
@@ -158,6 +160,7 @@ def np_loss(y_hat, y, z_all, z_context):
 model = NP(args).to(device)
 optimizer = optim.Adam(model.parameters(), lr=1e-3)
 x_grid = generate_grid(28, 28)
+os.makedirs("results/", exist_ok=True)
 
 
 def train(epoch):
